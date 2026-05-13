@@ -13,14 +13,14 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-    // PLAN:
+    /* PLAN:
     // 1. Create a new array that can store the required number of multiples.
     // 2. Use a loop to go through each position in the array.
     // 3. For each index:
        - Multiply the starting number by the current multiple number.
        - Since array indexes start at 0, use (index + 1).
     4. Store the calculated multiple into the array.
-    5. After the loop finishes, return the completed array.
+    5. After the loop finishes, return the completed array.*/
 
   
     // Create the array
