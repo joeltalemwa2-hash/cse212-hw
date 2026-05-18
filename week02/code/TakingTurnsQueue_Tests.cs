@@ -152,8 +152,8 @@ public class TakingTurnsQueueTests
     [TestMethod]
     // Scenario: Try to get the next person from an empty queue
     // Expected Result: Exception should be thrown with appropriate error message.
-    // Defect(s) Found: The queue did not always throw the required
-    // InvalidOperationException with the correct error message when empty.
+    // Defect(s) Found: No defects were found. The queue correctly threw
+    // an InvalidOperationException with the expected message when empty.
     
     public void TestTakingTurnsQueue_Empty()
     {

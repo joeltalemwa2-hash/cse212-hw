@@ -49,14 +49,15 @@ public class TakingTurnsQueue
     }
     else
     {
-        // Reduce remaining turns
-        person.Turns--;
-
-        // Re-add if turns remain
-        if (person.Turns > 0)
+        // Add back first if they still have turns remaining 
+        if (person.Turns > 1)
+             
         {
             _people.Enqueue(person);
         }
+
+        // Then reduce turns
+        person.Turns--;
     }
 
     return person;
