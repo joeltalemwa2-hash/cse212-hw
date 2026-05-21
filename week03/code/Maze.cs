@@ -33,12 +33,14 @@ public class Maze
     public void MoveLeft()
     {
         // FILL IN CODE
-        if
-        (_mazeMap[_currentLocation].Left)
+       // Index 0 = Left
+        if (_mazeMap[(_currX, _currY)][0])
         {
-            _currentLocation =
-             (_currentLocation.x - 1, 
-             _currentLocation.y);
+            _currX--;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
         }
         
     }
@@ -50,11 +52,15 @@ public class Maze
     public void MoveRight()
     {
         // FILL IN CODE
-        if
-        (_maze[_currentLocation].Right)
-         {
-        _currentLocation = (_currentLocation.x + 1, _currentLocation.y);
-    }
+        // Index 1 = Right
+        if (_mazeMap[(_currX, _currY)][1])
+        {
+            _currX++;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
     }
 
     /// <summary>
@@ -64,10 +70,16 @@ public class Maze
     public void MoveUp()
     {
         // FILL IN CODE
-         if (_maze[_currentLocation].Up)
-    {
-        _currentLocation = (_currentLocation.x, _currentLocation.y - 1);
-    }
+        // Index 2 = Up
+        if (_mazeMap[(_currX, _currY)][2])
+        {
+            _currY--;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+
     }
 
     /// <summary>
@@ -77,10 +89,15 @@ public class Maze
     public void MoveDown()
     {
         // FILL IN CODE
-        if (_maze[_currentLocation].Down)
-    {
-        _currentLocation = (_currentLocation.x, _currentLocation.y + 1);
-    }
+        // Index 3 = Down
+        if (_mazeMap[(_currX, _currY)][3])
+        {
+            _currY++;
+        }
+        else
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
     }
 
     public string GetStatus()
