@@ -81,6 +81,20 @@ public class BinarySearchTree : IEnumerable<int>
     private void TraverseBackward(Node? node, List<int> values)
     {
         // TODO Problem 3
+        // Problem 3: Base case - if the node is null, there is nothing to traverse
+        if (node is null)
+        {
+            return;
+        }
+
+        // 1. Traverse the right subtree first (contains larger values)
+        TraverseBackward(node.Right, values);
+
+        // 2. Add the current node's data to the list
+        values.Add(node.Data);
+
+        // 3. Traverse the left subtree last (contains smaller values)
+        TraverseBackward(node.Left, values);
     }
 
     /// <summary>
